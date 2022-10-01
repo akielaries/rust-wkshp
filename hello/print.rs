@@ -1,33 +1,29 @@
-fn run_print() {
-    println!("{}, {}!", "Hello", "world"); // Hello, world!
-    println!("{0}, {1}!", "Hello", "world"); // Hello, world!
-    println!("{greeting}, {name}!", greeting = "Hello", name = "world"); // Hello, world!
+// function for printing 
+fn run_prints() {
+    println!("{}, {}!", "rust", "lang");
+    println!("{0}, {1}!", "rust_", "lang_");
+    println!("{param_one}, {param_two}!", 
+             param_one = "rust__", param_two = "lang__");
 
-    let (greeting, name) = ("Hello", "world"); // 💡 Two Variable bindings declare & initialize in one line.
-    println!("{greeting}, {name}!"); // Hello, world!
+    // 2 variable bindings to declare and initialize in 1 line
+    let (param_one, param_two) = ("rust___", "lang___");
+    println!("{param_one}, {param_two}!");
+    
+    println!("{:?}", [9, 222, 17]);
+    println!("{:#?}", [9, 222, 17]):
 
-    println!("{:?}", [1, 2, 3]); // [1, 2, 3]
-    println!("{:#?}", [1, 2, 3]);
-    /*
-        [
-            1,
-            2,
-            3
-        ]
-    */
+    // format() store formatted string
+    let x = format!("{}, {}!", "rust____", "lang____");
+    println!("{}", x);
 
-    // 🔎 The format! macro is used to store the formatted string.
-    let x = format!("{}, {}!", "Hello", "world");
-    println!("{}", x); // Hello, world!
+    print!("rust lang w/o a carriage return");
+    print!("rust lang w/ a carriage return\n");
 
-    // 💡 Rust has a print!() macro as well
-    print!("Hello, world!"); // Without new line
-    println!(); // A new line
-
-    print!("Hello, world!\n"); // With new line
 }
 
+// main function, lets see how easy this part is
 fn main() {
-    run_print();
+    run_prints();
+
 }
 
