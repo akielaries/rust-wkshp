@@ -6,5 +6,8 @@ fn main() {
     println!("close to the hardware and utlizes memory mangement");
     print!("lets print without line breaks");
     print!("same line?");
+    // no return code
+    /* so far similar syntax to C
+     */
 }
 
