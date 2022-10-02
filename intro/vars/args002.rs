@@ -30,15 +30,26 @@ fn loop_sum(g: i8,h: i8) {
         println!("Difference in values: {}\n", diff);
 
         /*
-        * check that g is greater than h or else we would need to traverse,
-        * or allow, in reverse
+         * loop through the difference of our params
         */
         for i in g..h {
-            println!("{} + {} = {}", i, diff, h);
-            println!() 
-
-
+            println!("{} + {} = {}", i, g, h);
         }
+        println!("\n");
+        
+        /* 
+         * loop thru difference to take summation of
+         * append diff with one to take care of 0 index. dont want to include
+         * 0 in our summation
+         */
+        for i in 1..diff + 1 {
+            let mut sum = i + 1;
+            println!("{} + {} = {}", i, diff, sum);
+            return sum;
+        }
+        println!("Summation Σ {}-{} = {}", 1, diff, sum);
+
+
     }
     else {
         println!("ERR");
