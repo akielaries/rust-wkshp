@@ -1,9 +1,14 @@
 /*
+ * file to test out using functions, passing around variables, and some more
+ */
+
+/*
  * Lets test using functions, for this one we will set the result
  * value in main and return usin -> and specify the type
  * i8 = 8-bit signed integer
+ * i32 = 32-bit signed integer type
  */
-fn dump_sum(a: i8, b:i8) -> i8 {
+fn dump_sum(a: i32, b:i32) -> i32 {
     println!("<------------------- Running dump_sum() ------------------->");
     a + b
 }
@@ -11,7 +16,7 @@ fn dump_sum(a: i8, b:i8) -> i8 {
 /*
  * function to print the sum of two numbers passed in
  */
-fn print_sum(d: i8, e:i8) {
+fn print_sum(d: i32, e:i32) {
     println!("<------------------- Running print_sum() ------------------->");
     let f = d + e;
     println!("Printing using print_sum()\n");
@@ -29,9 +34,8 @@ fn print_sum(d: i8, e:i8) {
  * SUMMATION = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36
  *
  */
-fn summation(g: i8,h: i8) {
+fn summation(g: i32,h: i32) {
     println!("<------------------- Running summation() ------------------->");
-
 
     /*  
      * check that g is greater than h or else we would need to traverse,
@@ -52,10 +56,25 @@ fn summation(g: i8,h: i8) {
         let mut sum = 0;
         for n in 1..diff + 1 {
             sum = sum + n;
-            //println!("{} + {} = {}", i, 1, sum);
+            
+            /*
+             * try to print out formatted arithmetic
+             * E.G. :
+             * Summation 1-8
+             * 1 + 2 = 3
+             * 3 + 4 = 7
+             * 5 + 6 = 11
+             * OR
+             * store results in array and format with + in between
+             * each index
+             * E.G  :
+             * 1 + 2 + 3 + ... + n
+             */
+
+            //println!("{} + {} = {}", n, n + 1, sum);
             //return sum;
         }
-        println!("Summation Σ of {}-{} = {}", 1, diff, sum);
+        println!("\nSummation Σ of {}-{} = {}", 1, diff, sum);
 
     }
 
@@ -65,16 +84,29 @@ fn summation(g: i8,h: i8) {
 }
 
 fn main() {
-    let c = dump_sum(9, 1);
-    
-    println!("Printing using dump_sum(): \n{}\n", c);
+    // for test one
+    let num_a = 3;
+    let num_b = 11;
+    // for test two
+    let num_c = 54;
+    let num_d = 85;
+
+    /* 
+     * call dump_sum which adds two 8-bit signed integers and assigns the 
+     * result to c
+     */
+    let num_e = dump_sum(num_a, num_b);
+    println!("{} + {} = {}", num_a, num_b, num_e);
+
+    let num_f = dump_sum(num_c, num_d);
+    println!("{} + {} = {}", num_c, num_d, num_f);
 
     /*-------------------------*/
-    print_sum(10, 2);
+    print_sum(num_a, num_b);
+    print_sum(num_c, num_d);
     
-    summation(3, 11);
-    
-    summation(1, 12);
+    summation(num_a, num_b);
+    summation(num_c, num_d);
 
 }
 
