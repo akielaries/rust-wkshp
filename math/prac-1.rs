@@ -62,6 +62,21 @@ fn summation(g: i32,h: i32) {
     }
 }
 
+/*
+ * function that will print and return the logarithm
+ * based on the params passed in
+ */
+fn log(x: f32,b: f32) -> f32 {
+
+    // println!("<------------------- Running log() ------------------->");
+    
+    if x < b {
+        println!("ERR {}", x);
+        return 0;
+    }
+    return 1 + log(x/b, b);
+}
+
 
 // MAIN
 fn main () {
@@ -77,6 +92,8 @@ fn main () {
     summation(num_c, num_d);
 
     /*<---- RUN INTEGRATION ---->*/
+    let n = log(num_b as f32, num_a as f32);
+    println!("LOGARITHM log{}({}) = {}", num_a, num_b, n);
 
 }
 
