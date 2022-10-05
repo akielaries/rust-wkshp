@@ -14,18 +14,18 @@
  *
  */
 fn summation(g: i32,h: i32) {
-    println!("<------------------- Running summation() ------------------->");
+    println!("<------------------- Running summation() -------------------?");
 
     /*  
      * check that g is greater than h or else we would need to traverse,
      * or allow, in reverse
      */
     if h > g { 
-        println!("Printing using loop_sum() w/ vals {} - {}\n", g, h); 
+        println!("\nPrinting using summation() w/ vals {} - {}\n", g, h); 
 
         // store the difference in values 
         let diff = h - g;
-        println!("Difference in values: {}\n", diff);
+        println!("\nDifference in values: {}\n", diff);
 
         /* 
          * loop thru difference to take summation of
@@ -53,12 +53,12 @@ fn summation(g: i32,h: i32) {
             //println!("{} + {} = {}", n, n + 1, sum);
             //return sum;
         }
-        println!("\nSummation Σ of {}-{} = {}", 1, diff, sum);
+        println!("\nSummation Σ of {}-{} = {}\n", 1, diff, sum);
 
     }
 
     else {
-        println!("ERR");
+        println!("\nERR\n");
     }
 }
 
@@ -66,15 +66,25 @@ fn summation(g: i32,h: i32) {
  * function that will print and return the logarithm
  * based on the params passed in
  */
-fn log(x: f32,b: f32) -> f32 {
+fn log(x: f64,b: f64) -> f64 {
 
     // println!("<------------------- Running log() ------------------->");
     
     if x < b {
-        println!("ERR {}", x);
-        return 0;
+        println!("\nSTMT 1 : x = {} b = {}\n", x, b);
+        return 0.0;
     }
-    return 1 + log(x/b, b);
+    //return 1 + log(x/b, b);
+    println!("\nSTMT 2 : x = {} b = {}\n", x, b);
+
+    // return 1.0 + log(x/b , b);
+    let result = 1.0 + log(x / b, b); 
+
+    println!("\nSTMT 3 : x = {}, b = {}\n", x, b);
+
+    println!("\nSTMT 4 : RESULT = {}\n", result);
+
+    return result;
 }
 
 
@@ -91,10 +101,18 @@ fn main () {
     summation(num_a, num_b);
     summation(num_c, num_d);
 
-    /*<---- RUN INTEGRATION ---->*/
-    let n = log(num_b as f32, num_a as f32);
-    println!("LOGARITHM log{}({}) = {}", num_a, num_b, n);
+    /*<---- RUN LOG ---->*/
+    println!("<------------------- Running log() ------------------->");
 
+    let n = log(num_b as f64, num_a as f64);
+    println!("\nLOGARITHM log{}({}) = {:.2}\n", num_a, num_b, n);
+
+    println!("<------------------- Running log() AGAIN! ------------------->");
+    let n_o = log(num_d as f64, num_c as f64);
+    println!("\nLOGARITHM log{}({}) = {:.2}\n", num_c, num_d, n_o);
+
+
+    /*<---- RUN INTEGRATION ---->*/
 }
 
 
