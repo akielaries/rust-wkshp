@@ -80,9 +80,9 @@ fn log(x: f64,b: f64) -> f64 {
     // return 1.0 + log(x/b , b);
     let result = 1.0 + log(x / b, b); 
 
-    println!("\nSTMT 3 : x = {}, b = {}\n", x, b);
+    println!("\nSTMT 3 : x = {:.2}, b = {:.2}\n", x, b);
 
-    println!("\nSTMT 4 : RESULT = {}\n", result);
+    println!("\nSTMT 4 : RESULT = {:.2}\n", result);
 
     return result;
 }
