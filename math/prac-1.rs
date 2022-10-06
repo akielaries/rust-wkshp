@@ -109,8 +109,8 @@ fn main () {
 
     println!("<------------------- Running log() AGAIN! ------------------->");
     let n_o = log(num_d as f64, num_c as f64);
+    // 
     println!("\nLOGARITHM log{}({}) = {:.2}\n", num_c, num_d, n_o);
-
 
     /*<---- RUN INTEGRATION ---->*/
 }
