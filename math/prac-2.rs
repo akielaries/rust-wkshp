@@ -14,25 +14,18 @@ fn log(x: f64,b: f64) -> f64 {
     // println!("<------------------- Running log() ------------------->");
     
     if x < b {
-        println!("\nSTMT 1 : x = {:.2} b = {:.2}\n", x, b);
         return 0.0;
     }
-    //return 1 + log(x/b, b);
-    println!("\nSTMT 2 : x = {} b = {}\n", x, b);
 
-    // return 1.0 + log(x/b , b);
-    let result: f64 = 1.0 + log(x / b, b);
+    let result = 1.0 + log(x / b, b);
 
-    println!("\nSTMT 3 : x = {:.2}, b = {:.2}\n", x, b);
-
-    println!("\nSTMT 4 : RESULT = {:.2}\n", result as f64);
-
-    result
+    return result;
 }
 
 
 // MAIN
 fn main () {
+    /*
     /*<---- TEST ONE ---->*/
     let num_a = 3;
     let num_b = 11;
@@ -52,7 +45,7 @@ fn main () {
     println!("\nLOGARITHM log{}({}) = {:.2}\n", num_c, num_d, n_o);
 
     /*<---- RUN INTEGRATION ---->*/
-
+    */
     /*<---- RUN SOME DEBUGGING ---->*/
     let test_num1: i64 = 3;
     let test_num2: i64 = 11;

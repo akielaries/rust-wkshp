@@ -2,6 +2,8 @@
  * testing the implementation of some different math related algorithms
  */
 
+
+
 /*
  * This function swill print out the summation of the difference between 
  * two numbers
@@ -13,7 +15,7 @@
  * SUMMATION = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36
  *
  */
-fn summation(g: i32,h: i32) {
+fn summation(g: i64,h: i64) {
     println!("<------------------- Running summation() -------------------?");
 
     /*  
