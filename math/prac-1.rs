@@ -67,20 +67,22 @@ fn summation(g: i32,h: i32) {
  * based on the params passed in
  */
 fn log(x: f64,b: f64) -> f64 {
+    let x_i = x as f64;
+    let b_i = b as f64;
 
     // println!("<------------------- Running log() ------------------->");
     
-    if x < b {
-        println!("\nSTMT 1 : x = {} b = {}\n", x, b);
+    if x_i < b_i {
+        println!("\nSTMT 1 : x = {} b = {}\n", x_i, b_i);
         return 0.0;
     }
     //return 1 + log(x/b, b);
-    println!("\nSTMT 2 : x = {} b = {}\n", x, b);
+    println!("\nSTMT 2 : x = {} b = {}\n", x_i, b_i);
 
     // return 1.0 + log(x/b , b);
-    let result = 1.0 + log(x / b, b); 
+    let result = 1.0 + log(x_i / b_i, b_i); 
 
-    println!("\nSTMT 3 : x = {:.2}, b = {:.2}\n", x, b);
+    println!("\nSTMT 3 : x = {:.2}, b = {:.2}\n", x_i, b_i);
 
     println!("\nSTMT 4 : RESULT = {:.2}\n", result);
 
@@ -113,6 +115,8 @@ fn main () {
     println!("\nLOGARITHM log{}({}) = {:.2}\n", num_c, num_d, n_o);
 
     /*<---- RUN INTEGRATION ---->*/
-}
 
+    /*<---- RUN SOME DEBUGGING ---->*/
+
+}
 
