@@ -16,7 +16,9 @@ fn log(x: f64,b: f64) -> f64 {
     if x < b {
         return 0.0;
     }
-
+    /*
+     * rethink logic. always returns whole num
+     */
     let result = 1.0 + log(x / b, b);
 
     return result;
