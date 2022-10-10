@@ -24,6 +24,13 @@ fn log(x: f64,b: f64) -> f64 {
     return result;
 }
 
+/*
+ * compute the logarithm of a number given a base value
+ */
+fn logarithm(self, b: f64) -> f64 {
+    self.ln() / b.ln()
+}
+
 
 // MAIN
 fn main () {
@@ -57,6 +64,10 @@ fn main () {
     println!("\nDEBUGGING RESULT = {}\n", y as f64);
 
     println!("\nPRINTING FLOAT {}\n", test_num3);
+    
+    let x: f64 = logarithm(test_num2 as f64, test_num1 as f64);
+    println!("\nRUST LOGARITHM = {}\n", x);
+
 
 }
 
